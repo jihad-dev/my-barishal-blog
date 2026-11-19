@@ -1,6 +1,6 @@
 export interface WhatsAppContact {
   label: string;
-  number: string; // দেশের কোডসহ, যেমন 8801XXXXXXXXX
+  number: string; 
   display: string;
 }
 
@@ -14,56 +14,173 @@ export interface ServiceItem {
   description: string;
 }
 
+export interface ProjectItem {
+  title: string;
+  description: string;
+  techStack: string[];
+  highlights: string[];
+  liveUrl?: string;
+  frontendUrl?: string; 
+  backendUrl?: string; 
+}
+
+export interface ExperienceItem {
+  role: string;
+  company: string;
+  period: string;
+  highlights: string[];
+}
+
+export interface EducationItem {
+  degree: string;
+  institution: string;
+  status: string;
+}
+
+export interface SkillGroup {
+  category: string;
+  items: string[];
+}
+
 export const DEVELOPER_INFO = {
   name: "জিহাদুল ইসলাম (Jihadul Islam)",
-  role: "Full-Stack Web & Mobile App Developer",
+  role: "Full-Stack Developer",
   tagline:
-    "আধুনিক ওয়েব অ্যাপ্লিকেশন, Android/iOS মোবাইল অ্যাপ এবং কাস্টম বিজনেস সলিউশন তৈরি করি—যা আপনার ব্যবসাকে দ্রুত ডিজিটাল ও লাভজনক করে তোলে।",
-  avatar: "/images/developer.jpg", // public/images/developer.jpg ফোল্ডারে ছবি রাখুন
-  location: "বরিশাল, বাংলাদেশ (সারা দেশ ও আন্তর্জাতিক রিমোট ক্লায়েন্ট)",
-  availability: "নতুন প্রজেক্ট ও ক্লায়েন্ট কাজের জন্য এভেইলেবল",
-  email: "your.email@example.com",
-  phoneDisplay: "+880 1XXX-XXXXXX",
-  phoneHref: "tel:+8801XXXXXXXXX",
+    "React, Next.js, Node.js, Express.js ও MongoDB দিয়ে স্কেলেবল, নির্ভরযোগ্য ও ইউজার-ফ্রেন্ডলি ওয়েব অ্যাপ্লিকেশন তৈরি করি।",
+  avatar: "../../public/images/developer.png",
+  location: "উজিরপুর, বরিশাল, বাংলাদেশ",
+  availability: "নতুন প্রজেক্টের জন্য যোগাযোগ করুন",
+  email: "jihadul.islam.dev@gmail.com",
+  phoneDisplay: "+880 1611-889746",
+  phoneHref: "tel:+8801611889746",
   whatsappNumbers: [
     {
-      label: "প্রাইমারি হোয়াটসঅ্যাপ (নতুন প্রজেক্ট ও ক্লায়েন্ট আলোচনা)",
-      number: "8801XXXXXXXXX",
-      display: "+880 1XXX-XXXXXX",
-    },
-    {
-      label: "সেকেন্ডারি হোয়াটসঅ্যাপ (টেকনিক্যাল সাপোর্ট ও জরুরি যোগাযোগ)",
-      number: "8801YYYYYYYYY",
-      display: "+880 1YYY-YYYYYY",
+      label: "হোয়াটসঅ্যাপ",
+      number: "8801611889746",
+      display: "+880 1611-889746",
     },
   ] as WhatsAppContact[],
   github: "https://github.com/jihad-dev",
+  portfolio: "https://jihad-portfolio.vercel.app", 
   socials: [
-    { name: "LinkedIn", url: "https://linkedin.com/in/your-profile" },
-    { name: "Facebook", url: "https://facebook.com/your-page" },
-    { name: "YouTube", url: "https://youtube.com/@your-channel" },
+    
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/jihadul-islam-web-developer" },
   ] as SocialLink[],
-  mission:
-    "পরিচ্ছন্ন কোড, আধুনিক প্রযুক্তি এবং সহজ ইউজার ইন্টারফেসের মাধ্যমে ব্যবসা প্রতিষ্ঠান ও উদ্যোক্তাদের জন্য নির্ভরযোগ্য ওয়েব ও মোবাইল সফটওয়্যার তৈরি করা।",
-  vision:
-    "প্রযুক্তিকে সাধারণ মানুষ ও স্থানীয় ব্যবসার হাতের নাগালে নিয়ে আসা—যাতে প্রতিটি প্রতিষ্ঠান স্মার্ট ডিজিটাল সিস্টেমের মাধ্যমে এগিয়ে যেতে পারে।",
-  goal:
-    "প্রতিটি ক্লায়েন্টকে নির্ধারিত সময়ের মধ্যে মানসম্মত প্রজেক্ট ডেলিভারি দেওয়া, দীর্ঘমেয়াদী টেকনিক্যাল পার্টনার হিসেবে পাশে থাকা এবং ক্লায়েন্টের ব্যবসায়িক প্রবৃদ্ধি নিশ্চিত করা।",
+  summary:
+    "Full-Stack Developer — React, Next.js, Node.js, Express.js ও MongoDB দিয়ে ওয়েব অ্যাপ্লিকেশন তৈরি, ইন্টিগ্রেশন ও অপটিমাইজেশনে অভিজ্ঞ। REST API, অথেন্টিকেশন, ডিবাগিং ও পারফরম্যান্স অপটিমাইজেশনে দক্ষ, এবং স্কেলেবল, নির্ভরযোগ্য ও ইউজার-ফ্রেন্ডলি সলিউশনে ফোকাসড।",
   services: [
     {
-      title: "ওয়েবসাইট ও ফুল-স্ট্যাক ওয়েব অ্যাপ",
+      title: "ফুল-স্ট্যাক ওয়েব অ্যাপ্লিকেশন",
       description:
-        "Next.js, React, FastAPI ও Node.js দিয়ে দ্রুতগতির বিজনেস ওয়েবসাইট, ই-কমার্স ও কাস্টম ড্যাশবোর্ড।",
+        "React, Next.js, Node.js, Express ও MongoDB দিয়ে E-Commerce, LMS ও রেস্টুরেন্ট অর্ডারিং-এর মতো সম্পূর্ণ ওয়েব অ্যাপ।",
     },
     {
-      title: "মোবাইল অ্যাপ ডেভেলপমেন্ট",
+      title: "REST API ও অথেন্টিকেশন",
       description:
-        "React Native (Expo) ব্যবহার করে Android ও iOS-এর জন্য আধুনিক ও ইউজার-ফ্রেন্ডলি মোবাইল অ্যাপ্লিকেশন।",
+        "Node.js, Express ও FastAPI দিয়ে সিকিউর REST API, JWT অথেন্টিকেশন ও role-based access control। ডাটাবেজ: MongoDB, PostgreSQL, Firebase, Supabase।",
     },
     {
-      title: "ব্যাকএন্ড API ও ম্যানেজমেন্ট সফটওয়্যার",
+      title: "পেমেন্ট ও রিয়েল-টাইম ফিচার",
       description:
-        "স্কুল, কুরিয়ার, রেস্টুরেন্ট বা শপ ম্যানেজমেন্টের জন্য সিকিউর ডাটাবেজ ও অটোমেশন সলিউশন।",
+        "aamarPay পেমেন্ট গেটওয়ে ইন্টিগ্রেশন এবং Socket.io দিয়ে রিয়েল-টাইম নোটিফিকেশন ও লাইভ আপডেট।",
+    },
+    {
+      title: "ডিবাগিং ও পারফরম্যান্স অপটিমাইজেশন",
+      description:
+        "বিদ্যমান ওয়েব অ্যাপের বাগ ফিক্স, স্ট্যাবিলিটি উন্নয়ন ও পারফরম্যান্স অপটিমাইজেশন।",
     },
   ] as ServiceItem[],
+  skills: [
+    {
+      category: "Programming Languages",
+      items: ["C", "C++", "Python", "JavaScript", "TypeScript"],
+    },
+    {
+      category: "Frontend",
+      items: ["React", "Next.js", "Tailwind CSS", "Bootstrap", "DaisyUI"],
+    },
+    {
+      category: "Backend & Databases",
+      items: [
+        "Node.js",
+        "Express.js",
+        "FastAPI",
+        "REST APIs",
+        "JWT Auth",
+        "MongoDB",
+        "PostgreSQL",
+        "Firebase",
+        "Supabase",
+      ],
+    },
+    {
+      category: "Tools",
+      items: ["Git", "GitHub", "VS Code", "Postman", "Vercel", "Netlify", "Figma"],
+    },
+    {
+      category: "Soft Skills",
+      items: [
+        "Communication",
+        "Collaboration",
+        "Problem-Solving",
+        "Adaptability",
+        "Time Management",
+        "Leadership",
+      ],
+    },
+  ] as SkillGroup[],
+  experience: [
+    {
+      role: "React Developer Intern",
+      company: "Creative IT Institute",
+      period: "Jun 2024 – Aug 2024",
+      highlights: [
+        "JWT authentication ও role-based access control সহ MERN stack অ্যাপ্লিকেশন তৈরি ও ডিপ্লয় করেছি।",
+        "২০+ critical bug ফিক্স করে অ্যাপের স্ট্যাবিলিটি বাড়িয়েছি এবং গড় user session time ৩০% বৃদ্ধি করেছি।",
+      ],
+    },
+  ] as ExperienceItem[],
+  projects: [
+    {
+      title: "FoodieHub – Restaurant & Ordering System",
+      description:
+        "কাস্টমার অর্ডার ও অ্যাডমিন অপারেশন ম্যানেজ করার জন্য ফুল-স্ট্যাক রেস্টুরেন্ট অর্ডারিং প্ল্যাটফর্ম।",
+      techStack: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Tailwind CSS"],
+      highlights: [
+        "রেস্টুরেন্ট অর্ডার ব্রাউজ ও প্লেস করার জন্য responsive customer-facing interface।",
+        "রেস্টুরেন্ট অপারেশন ও কাস্টমার অর্ডার ম্যানেজ করার admin functionality।",
+        "Socket.io দিয়ে real-time order notification ও instant order update।",
+      ],
+    },
+    {
+      title: "Full-Stack E-Commerce Platform",
+      description:
+        "প্রোডাক্ট, শপিং কার্ট, চেকআউট ও অনলাইন অর্ডার ম্যানেজমেন্টের জন্য ফুল-স্ট্যাক ই-কমার্স প্ল্যাটফর্ম।",
+      techStack: ["React", "Node.js", "Express", "MongoDB", "aamarPay", "Redux"],
+      highlights: [
+        "Redux দিয়ে dynamic state management সহ product catalog ও shopping cart।",
+        "ইউজার ও অ্যাডমিনের জন্য role-based access সহ JWT-based authentication।",
+        "aamarPay payment gateway integration ও dynamic checkout workflow।",
+      ],
+    },
+    {
+      title: "Learning Management System (LMS)",
+      description:
+        "কোর্স, এনরোলমেন্ট ও স্টুডেন্ট প্রগ্রেস ম্যানেজ করার জন্য ফুল-স্ট্যাক প্ল্যাটফর্ম।",
+      techStack: ["Next.js", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+      highlights: [
+        "role-based dashboard সহ course management ও student enrollment।",
+        "অ্যাপ অ্যাক্সেস সিকিউর করতে JWT authentication।",
+        "lecture preview, progress tracking, course search ও filtering।",
+      ],
+    },
+  ] as ProjectItem[],
+  education: [
+    {
+      degree: "B.Sc. in Computer Science & Engineering",
+      institution: "University of Global Village (UGV)",
+      status: "চলমান",
+    },
+  ] as EducationItem[],
+  languages: ["English (Conversational)", "Bengali (Native)"],
 };

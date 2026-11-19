@@ -11,6 +11,12 @@ import { formatDate, type PostMeta } from "@/lib/mdx-types";
 
 const ALL = "সব";
 
+const featuredImages: Record<string, string> = {
+  "mission-vision-2026": "/images/featured-mission.svg",
+  "emergency-blood-donor-guide": "/images/featured-blood-donor.svg",
+  "about-my-barishal": "/images/featured-my-barishal.svg",
+};
+
 export default function HomeClient({ posts }: { posts: PostMeta[] }) {
   const [cat, setCat] = useState(ALL);
   const [q, setQ] = useState("");
@@ -53,21 +59,32 @@ export default function HomeClient({ posts }: { posts: PostMeta[] }) {
                       : i === 1
                       ? "bg-gradient-to-br from-amber-600 to-orange-500"
                       : "bg-gradient-to-br from-zinc-800 to-teal-700"
-                  }`}
+                  } relative overflow-hidden`}
                 >
-                  <span className="mb-2 w-fit rounded-full bg-white/20 px-3 py-1 text-xs font-semibold">
-                    {p.category}
-                  </span>
-                  <h3
-                    className={`font-bold leading-snug ${
-                      i === 0 ? "text-2xl md:text-3xl" : "text-lg"
-                    }`}
-                  >
-                    {p.title}
-                  </h3>
-                  <p className="mt-1 text-xs opacity-80" suppressHydrationWarning>
-                    {formatDate(p.date)}
-                  </p>
+                  {featuredImages[p.slug] && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={featuredImages[p.slug]}
+                      alt={p.title}
+                      className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/5" />
+                  <div className="relative z-10">
+                    <span className="mb-2 w-fit rounded-full bg-white/20 px-3 py-1 text-xs font-semibold">
+                      {p.category}
+                    </span>
+                    <h3
+                      className={`font-bold leading-snug ${
+                        i === 0 ? "text-2xl md:text-3xl" : "text-lg"
+                      }`}
+                    >
+                      {p.title}
+                    </h3>
+                    <p className="mt-1 text-xs opacity-80" suppressHydrationWarning>
+                      {formatDate(p.date)}
+                    </p>
+                  </div>
                 </Link>
               </motion.div>
             ))}
