@@ -1,0 +1,13 @@
+# My Barishal Blog
+
+> মাই বরিশাল (My Barishal) অ্যাপ ও ওয়েব পোর্টালের অফিশিয়াল ব্লগ। বরিশালের হাসপাতাল, রক্তদাতা, অ্যাম্বুলেন্স, ফায়ার সার্ভিস, পুলিশ ও আইনি সহায়তার মতো জরুরি সেবার তথ্য।
+
+- Main site: https://www.mybarishal.com
+- Blog: https://blog.mybarishal.com
+- Android app: https://play.google.com/store/apps/details?id=com.mybarisal.app
+
+## Articles
+
+- [মাই বরিশাল অ্যাপে রক্তদাতা খোঁজার সম্পূর্ণ গাইড](https://blog.mybarishal.com/blog/emergency-blood-donor-guide/): জরুরি মুহূর্তে বরিশালের যেকোনো এলাকায় দ্রুত রক্তদাতা খুঁজে পাওয়ার ধাপে ধাপে নির্দেশিকা।
+- [মাই বরিশাল কী এবং কেন তৈরি হলো?](https://blog.mybarishal.com/blog/about-my-barishal/): বরিশালবাসীর জরুরি সেবা এক অ্যাপে — মাই বরিশালের পরিচিতি, ফিচার ও পেছনের গল্প।
+- [মাই বরিশালের মিশন ও ভিশন ২০২৬](https://blog.mybarishal.com/blog/mission-vision-2026/): আগামী দিনে মাই বরিশাল কোথায় যেতে চায় — আমাদের লক্ষ্য, পরিকল্পনা ও প্রতিশ্রুতি।
